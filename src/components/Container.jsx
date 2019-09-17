@@ -78,8 +78,10 @@ export default function Container(props) {
           return appObject.url === currentAppParameter;
         });
         // 3- return the <Component />
-        return <TheRightAppObject.app />;
+        return <TheRightAppObject.app {...props} name='gabe' />;
       }} />
+
+      <Route path='/blackjack' render={props => <Blackjack {...props} name='gabe' />} />
 
       <Section
         color='#d6247a'
