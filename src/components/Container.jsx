@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Blackjack from '../screens/Blackjack';
 import RockPaperScissors from '../screens/RockPaperScissors';
@@ -69,6 +69,13 @@ export default function Container(props) {
           apps.map(app => <NavLink to={app.url}>{app.name}</NavLink>)
         }
       </nav>
+
+      <Route path='/:gaga' render={props => {
+        // 1- find out what this ":app" actually is in the browser location
+        const currentApp = props.match.params.gaga;
+        // 2- knowing which app, pull the right component from the apps array
+        // 3- return the <Component />
+      }} />
 
       <Section
         color='#d6247a'
