@@ -17,7 +17,6 @@ We need `node` & `npm`. Command line commands are run inside the project folder.
   * Creating sub-routes using `match.path` and `match.url`.
   * Learn about `history.push()`.
   * Learn about `history.replace()`.
-  * Creating Navlinks using `match.url`.
   * Learn about the `NavLink` component.
   * Style Links and Navlinks using `styled-components`.
   * Learn about `Switch` component.
