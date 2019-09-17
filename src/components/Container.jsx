@@ -65,8 +65,9 @@ export default function Container(props) {
   return (
     <StyledContainer>
       <nav>
-        {/* <NavLink activeStyle={{ color: 'red' }} to='/blackjack'>Blackjack</NavLink> */}
-        <NavLink activeClassName='active-linky' to='/blackjack'>Blackjack</NavLink>
+        {
+          apps.map(app => <NavLink to={app.url}>{app.name}</NavLink>)
+        }
       </nav>
 
       <Section
