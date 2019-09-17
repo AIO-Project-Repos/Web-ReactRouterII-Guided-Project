@@ -34,11 +34,17 @@ const StyledContainer = styled.div`
   }
 `;
 
+function Link(props) { // at least  props.to, props.children
+  // we need an anchor tag in the jsx
+  // we need a click handler on said anchor tag
+  // we need to use the HTML5 history API (pushState)
+}
+
 export default function Container(props) {
   return (
     <StyledContainer>
       <nav>
-
+        <Link to='/blackjack'>Blackjack</Link>
       </nav>
 
       <Section
