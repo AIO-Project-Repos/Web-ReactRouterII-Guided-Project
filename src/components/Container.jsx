@@ -74,9 +74,9 @@ export default function Container(props) {
         // 1- find out what this ":app" actually is in the browser location
         const currentAppParameter = props.match.params.app;
         // 2- knowing which app, pull the right component from the apps array
-        const theRightAppObject = apps.find(appObject => {
+        const theRightAppObject = apps.filter(appObject => {
           return appObject.url === currentAppParameter;
-        });
+        })[0];
         // 3- return the <Component />
         const Component = theRightAppObject.app;
         return <Component />;
