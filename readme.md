@@ -14,7 +14,7 @@ We need `node` & `npm`. Command line commands are run inside the project folder.
   * Learn about the `children` prop for inlining functions inside `Route`.
   * Passing "normal" props along to the component rendered by `Route`.
   * Passing `history`, `match` and `location` props to the component rendered by `Route`.
-  * Creating sub-routes using `match.path`.
+  * Creating sub-routes using `match.path` and `match.url`.
   * Learn about `history.push()`.
   * Learn about `history.replace()`.
   * Creating Navlinks using `match.url`.
