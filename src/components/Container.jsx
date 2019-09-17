@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Blackjack from '../screens/Blackjack';
 import RockPaperScissors from '../screens/RockPaperScissors';
@@ -34,17 +35,38 @@ const StyledContainer = styled.div`
   }
 `;
 
-function Link(props) { // at least  props.to, props.children
-  // we need an anchor tag in the jsx
-  // we need a click handler on said anchor tag
-  // we need to use the HTML5 history API (pushState)
-}
+// const navigate = (e, to) => {
+//   e.preventDefault();
+//   history.pushState(null, null, to);
+// };
+
+// function Link(props) { // at least  props.to, props.children
+//   // we need an anchor tag in the jsx
+//   // we need a click handler on said anchor tag
+//   // we need to use the HTML5 history API (pushState)
+
+//   const onClick = e => navigate(e, props.to);
+
+//   return (
+//     <a
+//       href='#'
+//       className={props.className ? props.className : null}
+//       onClick={onClick}>
+//       {props.children}
+//     </a>
+//   );
+// }
+
+// const StyledLink = styled(Link)`
+//   color: green;
+// `;
 
 export default function Container(props) {
   return (
     <StyledContainer>
       <nav>
-        <Link to='/blackjack'>Blackjack</Link>
+        {/* <NavLink activeStyle={{ color: 'red' }} to='/blackjack'>Blackjack</NavLink> */}
+        <NavLink activeClassName='active-linky' to='/blackjack'>Blackjack</NavLink>
       </nav>
 
       <Section
