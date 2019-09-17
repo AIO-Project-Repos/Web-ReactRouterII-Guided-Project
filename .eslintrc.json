@@ -54,6 +54,7 @@
         "react/jsx-closing-bracket-location": 0,
         "react/require-default-props": 0,
         "react/jsx-props-no-spreading": 0,
-        "import/first": 0
+        "import/first": 0,
+        "comma-dangle": 0
     }
 }
