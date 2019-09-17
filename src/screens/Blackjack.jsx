@@ -1,9 +1,13 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Redirect } from 'react-router-dom';
 import Section from '../components/Section';
 
 
 export default function Blackjack(props) {
+  if (!localStorage.getItem('auth')) {
+    return <Redirect to='/' />;
+  }
+
   return (
     <div>
       <Section
