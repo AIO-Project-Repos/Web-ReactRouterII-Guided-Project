@@ -66,15 +66,20 @@ export default function Container(props) {
     <StyledContainer>
       <nav>
         {
-          apps.map(app => <NavLink to={app.url}>{app.name}</NavLink>)
+          apps.map(app => <NavLink key={app.url} to={app.url}>{app.name}</NavLink>)
         }
       </nav>
 
-      <Route path='/:gaga' render={props => {
+      <Route path='/:app' render={props => {
         // 1- find out what this ":app" actually is in the browser location
-        const currentApp = props.match.params.gaga;
+        const currentAppParameter = props.match.params.app;
         // 2- knowing which app, pull the right component from the apps array
+        const theRightAppObject = apps.find(appObject => {
+          return appObject.url === currentAppParameter;
+        });
         // 3- return the <Component />
+        const Component = theRightAppObject.app;
+        return <Component />;
       }} />
 
       <Section
