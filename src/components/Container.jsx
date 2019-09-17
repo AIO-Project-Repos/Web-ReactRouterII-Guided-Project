@@ -81,7 +81,10 @@ export default function Container(props) {
         return <TheRightAppObject.app {...props} name='gabe' />;
       }} />
 
-      <Route path='/blackjack' render={props => <Blackjack {...props} name='gabe' />} />
+      <Route
+        path='/blackjack'
+        render={props => <Blackjack {...props} name='gabe' />}
+      />
 
       <Section
         color='#d6247a'
