@@ -16,7 +16,8 @@ export default function Blackjack(props) {
       /blackjack/player
       /blackjack/dealer */}
 
-      
+      <Link to={props.match.url + '/player'}>Player</Link>
+      <Link to={props.match.url + '/dealer'}>Dealer</Link>
     </div>
   );
 }

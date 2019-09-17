@@ -66,7 +66,7 @@ export default function Container(props) {
     <StyledContainer>
       <nav>
         {
-          apps.map(app => <NavLink key={app.url} to={app.url}>{app.name}</NavLink>)
+          apps.map(app => <NavLink key={app.url} to={'/' + app.url}>{app.name}</NavLink>)
         }
       </nav>
 
@@ -84,16 +84,16 @@ export default function Container(props) {
 
       {/* no chance to pass extra props to Blackjack component */}
       {/* but Blackjack does get history match and location */}
-      <Route
+      {/* <Route
         path='/blackjack'
         component={Blackjack}
-      />
+      /> */}
 
       {/* more work, but we are able to inject any extra props */}
-      <Route
+      {/* <Route
         path='/blackjack'
         render={props => <Blackjack {...props} name='gabe' />}
-      />
+      /> */}
 
       <Section
         color='#d6247a'
