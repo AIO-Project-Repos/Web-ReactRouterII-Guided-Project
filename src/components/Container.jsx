@@ -74,13 +74,22 @@ export default function Container(props) {
         // 1- find out what this ":app" actually is in the browser location
         const currentAppParameter = props.match.params.app;
         // 2- knowing which app, pull the right component from the apps array
-        const TheRightAppObject = apps.find(appObject => {
+        const theRightAppObject = apps.find(appObject => {
           return appObject.url === currentAppParameter;
         });
+        const Component = theRightAppObject.app;
         // 3- return the <Component />
-        return <TheRightAppObject.app {...props} name='gabe' />;
+        return <Component {...props} name='gabe' />;
       }} />
 
+      {/* no chance to pass extra props to Blackjack component */}
+      {/* but Blackjack does get history match and location */}
+      <Route
+        path='/blackjack'
+        component={Blackjack}
+      />
+
+      {/* more work, but we are able to inject any extra props */}
       <Route
         path='/blackjack'
         render={props => <Blackjack {...props} name='gabe' />}
