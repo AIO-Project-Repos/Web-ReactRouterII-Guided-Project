@@ -5,6 +5,23 @@ import RockPaperScissors from '../screens/RockPaperScissors';
 import TicTacToe from '../screens/TicTacToe';
 import Section from './Section';
 
+const apps = [
+  {
+    url: 'blackjack',
+    name: 'Blackjack',
+    app: Blackjack,
+  },
+  {
+    url: 'rock_paper_scissors',
+    name: 'Rock Paper Scissors',
+    app: RockPaperScissors,
+  },
+  {
+    url: 'tic_tac_toe',
+    name: 'Tic Tac Toe',
+    app: TicTacToe,
+  },
+];
 
 const StyledContainer = styled.div`
   padding: 20px;
@@ -21,17 +38,8 @@ export default function Container(props) {
   return (
     <StyledContainer>
       <nav>
-        <a href='#'>Black</a>
-        <a href='#'>Rock</a>
-        <a href='#'>Tic</a>
-        <a href='#'>Contact</a>
+
       </nav>
-
-      <Blackjack />
-
-      <RockPaperScissors />
-
-      <TicTacToe />
 
       <Section
         color='#d6247a'

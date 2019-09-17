@@ -27,20 +27,18 @@ export default function Section({ heading, content, color, path }) {
     <StyledSection color={color}>
       <h3>{heading}</h3>
       {!!path && <h5>{path}</h5>}
-      <p>{content}</p>
+      <div>{content}</div>
     </StyledSection>
   );
 }
 
 Section.propTypes = {
   heading: string,
-  content: string,
   color: string,
   path: string,
 };
 
 Section.defaultProps = {
   heading: 'Default Section',
-  content: 'This is default content.',
   color: 'white',
 };
