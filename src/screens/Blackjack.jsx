@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, Route, Redirect } from 'react-router-dom';
 import Section from '../components/Section';
 
 
 export default function Blackjack(props) {
-  if (!localStorage.getItem('auth')) {
-    return <Redirect to='/' />;
-  }
+  // if (!localStorage.getItem('auth')) {
+  //   return <Redirect to='/' />;
+  // }
+
+  useEffect(() => {
+    props.history.push('/');
+  }, []);
 
   return (
     <div>
